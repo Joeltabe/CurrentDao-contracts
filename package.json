@@ -1,14 +1,24 @@
 {
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.6"
   "name": "currentdao-contracts",
   "version": "1.0.0",
   "description": "Smart contracts for the CurrentDao solar energy ecosystem on Stellar/Soroban.",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs",
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:emergency": "jest tests/emergency",
+    "test:coverage": "jest --coverage",
+    "deploy:emergency": "ts-node scripts/deploy_emergency.ts",
+    "build": "tsc",
+    "dev": "ts-node --watch"
   },
   "repository": {
     "type": "git",
@@ -17,7 +27,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Codekill33/CurrentDao-contracts/issues"
   },
