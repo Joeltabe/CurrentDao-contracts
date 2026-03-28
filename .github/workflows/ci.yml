@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -62,7 +62,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -100,7 +100,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -139,7 +139,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -179,7 +179,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -207,7 +207,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -237,7 +237,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -271,7 +271,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -312,7 +312,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -373,7 +373,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
@@ -441,7 +441,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.x'
-        cache: 'npm'
+        package-manager-cache: false
 
     - name: Install dependencies
       run: npm install
