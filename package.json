@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "Smart contracts for the CurrentDao solar energy ecosystem on Stellar/Soroban.",
   "main": "index.js",
+  "type": "commonjs",
   "directories": {
     "doc": "docs",
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:acl": "jest tests/acl/AccessControlList.test.ts",
+    "test:emergency": "jest tests/emergency",
+    "test:fees": "jest tests/fees/FeeManager.test.ts",
+    "test:analytics": "jest tests/analytics/UsageAnalytics.test.ts",
+    "test:coverage": "jest --coverage",
+    "lint": "echo 'Linting not configured yet'",
+    "deploy:acl": "ts-node scripts/deploy_acl.ts",
+    "deploy:emergency": "ts-node scripts/deploy_emergency.ts",
+    "deploy:fees": "ts-node scripts/deploy_fees.ts",
+    "deploy:analytics": "ts-node scripts/deploy_usage_analytics.ts",
+    "build": "tsc",
+    "verify:fees": "ts-node -e \"const { FeeSystemDeployer } = require('./scripts/deploy_fees'); const deployer = new FeeSystemDeployer({network: 'development', owner: '0xowner', treasury: '0xtreasury', validators: '0xvalidators', developers: '0xdevelopers', enableDynamicFees: true, initialNetworkCongestion: 20}); deployer.verifyDeployment({feeManager: new (require('./contracts/fees/FeeManager').FeeManager)('0xowner'), config: deployer.config, deploymentHash: 'test', timestamp: Date.now(), gasUsed: 0}).then(console.log);\""
   },
   "repository": {
     "type": "git",
@@ -17,17 +30,25 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "type": "module",
+=======
+>>>>>>> b6dd6aa8a11a3a136cd3b7ca91328f5cb281cecb
   "bugs": {
     "url": "https://github.com/Codekill33/CurrentDao-contracts/issues"
   },
   "homepage": "https://github.com/Codekill33/CurrentDao-contracts#readme",
   "devDependencies": {
     "@types/jest": "^30.0.0",
+    "@types/node": "^24.6.0",
     "jest": "^30.3.0",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
+<<<<<<< HEAD
     "typescript": "^6.0.2",
     "@types/node": "^22.0.0"
+=======
+    "typescript": "^5.9.3"
+>>>>>>> b6dd6aa8a11a3a136cd3b7ca91328f5cb281cecb
   }
 }
